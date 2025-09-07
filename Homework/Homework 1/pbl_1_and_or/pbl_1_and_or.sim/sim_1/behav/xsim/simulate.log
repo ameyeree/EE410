@@ -1,6 +1,0 @@
-Time resolution is 1 ps
-a	b	c	d		e
-0	0	0	0		0
-1	1	0	1		1
-1	0	1	1		1
-$finish called at time : 30 ns : File "C:/Users/Anthony/Documents/Fall 2025/EE410/Projects/EE410/Homework/Homework 1/pbl_1_and_or/pbl_1_and_or.srcs/sim_1/new/and_or_combinational_tb.v" Line 63

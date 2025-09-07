@@ -1,0 +1,8 @@
+Time resolution is 1 ps
+sel	a	b	c	d		e
+0	0	0	0	0		0
+0	1	1	0	1		1
+1	1	1	0	1		0
+0	0	1	1	1		0
+1	0	1	1	1		1
+$finish called at time : 42 ns : File "C:/Users/Anthony/Documents/Fall 2025/EE410/Projects/EE410/Homework/Homework 1/pbl_2_and_mux/pbl_2_and_mux.srcs/sim_1/new/tb_and_mux_combinational.v" Line 88

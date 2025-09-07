@@ -43,24 +43,32 @@ module and_or_combinational_tb;
         c = 1'b0;
         d = 1'b0;
 
+        // a=b=d=1, c = 0
+        // Expected Output = 1
         #10;
         a = 1'b1;
         b = 1'b1;
         c = 1'b0;
         d = 1'b1;
 
+        // a=c=d=1, b = 0
+        // Expected Output = 1
         #10;
         a = 1'b1;
         b = 1'b0;
         c = 1'b1;
         d = 1'b1;
 
+        // a=d=1, b=c=0
+        // Expected Output = 0
         #10;
         a = 1'b1;
         b = 1'b0;
         c = 1'b1;
         d = 1'b0;
 
+        #10;
+        
         $finish;
 
     end
