@@ -1,0 +1,4 @@
+Running: xsim.dir/tb_and_or_tri_combinational_behav/xsimk.exe -simmode gui -wdb tb_and_or_tri_combinational_behav.wdb -simrunnum 0 -socket 50505
+Design successfully loaded
+Design Loading Memory Usage: 9300 KB (Peak: 9300 KB)
+Design Loading CPU Usage: 62 ms
