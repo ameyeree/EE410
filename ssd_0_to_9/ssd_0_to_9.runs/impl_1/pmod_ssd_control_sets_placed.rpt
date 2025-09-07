@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Fri Aug 22 20:47:09 2025
+| Date         : Wed Aug 27 17:50:01 2025
 | Host         : DESKTOP-BU99R80 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file pmod_ssd_control_sets_placed.rpt
 | Design       : pmod_ssd
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     2 |
-|    Minimum number of control sets                        |     2 |
+| Total control sets                                       |    23 |
+|    Minimum number of control sets                        |    23 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |     5 |
+| Unused register locations in slices containing registers |   151 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,12 +39,12 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     2 |
-| >= 0 to < 4        |     0 |
-| >= 4 to < 6        |     0 |
+| Total control sets |    23 |
+| >= 0 to < 4        |    21 |
+| >= 4 to < 6        |     1 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
-| >= 10 to < 12      |     1 |
+| >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
 | >= 16              |     1 |
@@ -59,10 +59,10 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               0 |            0 |
-| No           | No                    | Yes                    |              32 |            8 |
-| No           | Yes                   | No                     |               0 |            0 |
+| No           | No                    | Yes                    |              46 |           21 |
+| No           | Yes                   | No                     |               7 |            7 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              11 |            2 |
+| Yes          | No                    | Yes                    |               4 |            1 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,11 +70,32 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+--------------------+----------------+-----------------------+------------------+----------------+--------------+
-|    Clock Signal    |  Enable Signal |    Set/Reset Signal   | Slice Load Count | Bel Load Count | Bels / Slice |
-+--------------------+----------------+-----------------------+------------------+----------------+--------------+
-|  sys_clk_IBUF_BUFG | ssd[6]_i_1_n_0 | timer_cnt[31]_i_2_n_0 |                2 |             11 |         5.50 |
-|  sys_clk_IBUF_BUFG |                | timer_cnt[31]_i_2_n_0 |                8 |             32 |         4.00 |
-+--------------------+----------------+-----------------------+------------------+----------------+--------------+
++-------------------------+-----------------------+------------------------+------------------+----------------+--------------+
+|       Clock Signal      |     Enable Signal     |    Set/Reset Signal    | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------+-----------------------+------------------------+------------------+----------------+--------------+
+|  ssd_reg[0]_LDC_i_1_n_0 |                       | ssd_reg[0]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  ssd_reg[1]_LDC_i_1_n_0 |                       | ssd_reg[1]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  ssd_reg[2]_LDC_i_1_n_0 |                       | ssd_reg[2]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  ssd_reg[6]_LDC_i_1_n_0 |                       | ssd_reg[6]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  sys_clk_IBUF_BUFG      |                       | ssd_reg[0]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  sys_clk_IBUF_BUFG      |                       | ssd_reg[0]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  sys_clk_IBUF_BUFG      |                       | ssd_reg[1]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  sys_clk_IBUF_BUFG      |                       | ssd_reg[1]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  sys_clk_IBUF_BUFG      |                       | ssd_reg[2]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  sys_clk_IBUF_BUFG      |                       | ssd_reg[4]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  sys_clk_IBUF_BUFG      |                       | ssd_reg[5]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  sys_clk_IBUF_BUFG      |                       | ssd_reg[6]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  sys_clk_IBUF_BUFG      |                       | ssd_reg[6]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  sys_clk_IBUF_BUFG      |                       | ssd_reg[2]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  sys_clk_IBUF_BUFG      |                       | ssd_reg[5]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  sys_clk_IBUF_BUFG      |                       | ssd_reg[3]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  sys_clk_IBUF_BUFG      |                       | ssd_reg[4]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  sys_clk_IBUF_BUFG      |                       | ssd_reg[3]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  ssd_reg[5]_LDC_i_1_n_0 |                       | ssd_reg[5]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  ssd_reg[3]_LDC_i_1_n_0 |                       | ssd_reg[3]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  ssd_reg[4]_LDC_i_1_n_0 |                       | ssd_reg[4]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  sys_clk_IBUF_BUFG      | binary_cnt[3]_i_1_n_0 | timer_cnt[31]_i_2_n_0  |                1 |              4 |         4.00 |
+|  sys_clk_IBUF_BUFG      |                       | timer_cnt[31]_i_2_n_0  |                7 |             32 |         4.57 |
++-------------------------+-----------------------+------------------------+------------------+----------------+--------------+
 
 
