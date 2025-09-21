@@ -1,0 +1,9 @@
+Time resolution is 1 ps
+en	a	b	c	d		f
+0	0	0	0	0		z
+0	1	1	1	1		z
+1	1	1	0	1		1
+1	0	1	1	0		0
+1	1	0	1	1		1
+1	0	0	1	1		1
+$finish called at time : 60 ns : File "C:/Users/Anthony/Documents/Fall 2025/EE410/Projects/EE410/Homework/Homework 1/pbl_3_and_or_tri/pbl_3_and_or_tri.srcs/sim_1/new/tb_and_or_tri_combinational.v" Line 96

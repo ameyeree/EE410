@@ -9,7 +9,7 @@
 // Project Name: PBL 3: AND-OR-Tri Combinational
 // Target Devices: PYNQ-Z2
 // Tool Versions: 
-// Description: Testing and-or-tri combinational logic and tesbench
+// Description: Testing and-or-tri combinational logic and testbench
 // 
 // Dependencies: 
 // 
