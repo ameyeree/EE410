@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log four_bit_full_adder.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source four_bit_full_adder.tcl" );
+         "-log four_bit_full_adder_driver.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source four_bit_full_adder_driver.tcl" );
 
 
 

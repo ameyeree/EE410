@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Anthony/Documents/Fall 2025/EE410/Projects/hierarchical_4_bit_full_adder/hierarchical_4_bit_full_adder.runs/synth_1'
+HD_PWD='C:/Users/Anthony/Documents/Fall 2025/EE410/Projects/EE410/hierarchical_4_bit_full_adder/hierarchical_4_bit_full_adder.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log four_bit_full_adder.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source four_bit_full_adder.tcl
+EAStep vivado -log four_bit_full_adder_driver.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source four_bit_full_adder_driver.tcl
